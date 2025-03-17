@@ -15,7 +15,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean continuar = true;
 
-        // Menú Principal
         while (continuar) {
             System.out.println("\n--- Menú Principal ---");
             System.out.println("1. Usar el programa");
@@ -44,13 +43,11 @@ public class Main {
         System.out.println("\n¡Bienvenido al programa de BusElche!");
         System.out.println("Este programa calcula el tiempo de trayecto en la línea A.");
 
-        // Mostrar paradas disponibles
         System.out.println("\nAquí tienes la lista de paradas disponibles:");
         for (Parada parada : paradas) {
             System.out.println(parada);
         }
 
-        // Elegir parada inicial
         String paradaInicial = null;
         while (true) {
             System.out.print("\nElige la parada inicial (introduce el número): ");
@@ -63,7 +60,6 @@ public class Main {
             }
         }
 
-        // Elegir parada final
         String paradaFinal = null;
         while (true) {
             System.out.print("Elige la parada final (introduce el número): ");
@@ -79,7 +75,6 @@ public class Main {
             }
         }
 
-        // Calcular el trayecto
         int tiempo = lineaA.calcularTrayecto(paradaInicial, paradaFinal);
         if (tiempo != -1) {
             System.out.println("\nEl tiempo estimado para el trayecto entre " + paradaInicial + " y " + paradaFinal + " es de " +
@@ -88,16 +83,15 @@ public class Main {
             System.out.println("No se encontró un trayecto válido entre las paradas seleccionadas.");
         }
 
-        // Preguntar si el usuario desea continuar o salir
         while (true) {
             System.out.print("\n¿Deseas realizar otro cálculo? (S/N): ");
             String continuar = scanner.nextLine().trim().toUpperCase();
 
             if (continuar.equals("S")) {
-                return; // Regresa al menú principal
+                return; 
             } else if (continuar.equals("N")) {
                 System.out.println("¡Gracias por usar el programa! Hasta la próxima.");
-                System.exit(0); // Termina el programa
+                System.exit(0); 
             } else {
                 System.out.println("Opción no válida. Por favor, introduce 'S' o 'N'.");
             }

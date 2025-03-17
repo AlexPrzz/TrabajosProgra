@@ -8,7 +8,7 @@ public class Main {
                 new Parada("001", "Centre-Doctor Caro", "C / Doctor Caro"),
                 new Parada("002", "Vicente Blasco Ibáñez, 22", "C / Vicente Blasco Ibáñez, 22"),
                 new Parada("003", "Vicente Blasco Ibáñez, 80", "C / Vicente Blasco Ibáñez, 80"),
-                new Parada("004", "Inm Carrús", "Plaza Carrús"),
+                new Parada("004", "Inem Carrús", "Plaza Carrús"),
                 new Parada("005", "Pedro Moreno Sastre, 62", "C / Pedro Moreno Sastre, 62")
         };
 

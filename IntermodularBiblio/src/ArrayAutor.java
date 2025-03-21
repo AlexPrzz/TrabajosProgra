@@ -5,7 +5,7 @@ public class ArrayAutor {
 
     public ArrayAutor() {
         this.autores = new ArrayList<>();
-        // Datos de ejemplo
+
         autores.add(new Autor(1, "Española", "Premio Cervantes", "Miguel", "de Cervantes", "Saavedra"));
         autores.add(new Autor(2, "Británica", "Premio Nobel", "William", "Shakespeare", ""));
         autores.add(new Autor(3, "Rusa", "Premio Pushkin", "Aleksandr", "Púshkin", ""));
@@ -53,4 +53,8 @@ public class ArrayAutor {
             //System.out.println("-----------");
         }
     }
+    public ArrayList<Autor> getAutores() {
+        return autores;
+    }
+
 }

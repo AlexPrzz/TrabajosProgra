@@ -6,7 +6,6 @@ public class Autor {
     private String apellido1;
     private String apellido2;
 
-    // Constructor
     public Autor(int idAutor, String nacionalidad, String premios, String nombre, String apellido1, String apellido2) {
         if (idAutor <= 0) {
             throw new IllegalArgumentException("El ID del autor no puede ser cero o negativo.");
@@ -79,7 +78,6 @@ public class Autor {
         this.apellido2 = apellido2;
     }
 
-    // Método para mostrar la información en formato XML
     public void mostrarInformacion() {
         System.out.println("  <Autor>");
         System.out.println("    <ID>" + idAutor + "</ID>");

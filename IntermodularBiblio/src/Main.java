@@ -33,9 +33,6 @@ public class Main {
                     queryAutor();
                     break;
                 case 5:
-                    printAutor();
-                    break;
-                case 6:
                     mostrarInformeXML();
                     break;
                 case 0:
@@ -44,6 +41,7 @@ public class Main {
                 default:
                     System.out.println("Opción no válida. Inténtalo de nuevo.");
             }
+
         }
     }
 
@@ -53,11 +51,11 @@ public class Main {
         System.out.println("2. Eliminar");
         System.out.println("3. Actualizar");
         System.out.println("4. Consultar");
-        System.out.println("5. Imprimir todos los datos disponibles");
-        System.out.println("6. Mostrar informe en formato XML");
+        System.out.println("5. Mostrar informe en formato XML");
         System.out.println("0. Salir");
         System.out.print("Elige una opción: ");
     }
+
 
     private static void addNewAutor() {
         int idAutor = 0;
@@ -151,10 +149,16 @@ public class Main {
     }
 
     private static void mostrarInformeXML() {
-        System.out.println("<Autores>");
-        arrayAutor.printAutor();
-        System.out.println("</Autores>");
+        if (arrayAutor == null || arrayAutor.getAutores().isEmpty()) {
+            System.out.println("Este archivo XML está vacío, introduce datos para generar un archivo válido");
+        } else {
+            System.out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+            System.out.println("<Autores>");
+            arrayAutor.printAutor();
+            System.out.println("</Autores>");
+        }
     }
+
 
     private static Autor inputAutor() {
         int idAutor = 0;
